@@ -1,3 +1,9 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript", "@feature-sliced", "plugin:@conarti/feature-sliced/recommended"],
+  "rules": {
+    "semi": "error",
+    "quotes": "error",
+    "react/display-name": "off",
+    "@conarti/feature-sliced/absolute-relative": "off"
+  }
 }
