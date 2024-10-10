@@ -5,7 +5,7 @@
     @apply mx-auto flex max-w-screen-2xl items-center justify-between px-6 py-4 lg:py-5 lg:px-8;
   }
 
-  .header-nav-links {
-    @apply hidden lg:flex;
+  .nav-links {
+    @apply hidden lg:flex lg:gap-x-12;
   }
 }

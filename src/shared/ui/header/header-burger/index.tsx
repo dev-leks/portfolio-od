@@ -12,7 +12,7 @@ export function HeaderBurger(props: HeaderBurgerProps) {
     <IconButton
       aria-label="Open main menu"
       variant="ghost"
-      icon={<MdMenu size={24} />}
+      icon={<MdMenu size={28} />}
       onClick={onClick}
     />
   );

@@ -6,11 +6,11 @@ import {
   DrawerContent,
   DrawerFooter,
   DrawerHeader,
-  DrawerOverlay, Flex
+  DrawerOverlay,
 } from "@chakra-ui/react";
 import { Action, NavItem } from "@/shared/config";
-import { LogoLink, NavLinks } from "@/shared/ui";
-import { HeaderActions } from "../header-actions";
+import { ActionsButtons, LogoLink, NavLinks } from "@/shared/ui";
+import "./styles.scss";
 
 interface HeaderSidebarProps {
   isOpen: boolean;
@@ -30,20 +30,18 @@ export function HeaderSidebar(props: HeaderSidebarProps) {
       onClose={onClose}
     >
       <DrawerOverlay />
-      <DrawerContent>
+      <DrawerContent className="header-sidebar">
         <DrawerCloseButton size="lg" className="bg-gray-800" />
         <DrawerHeader>
           <LogoLink onClick={onClose} />
         </DrawerHeader>
         <Divider />
         <DrawerBody className="py-6">
-          <Flex flexDirection="column" gap="2">
-            <NavLinks items={navItems} onLinkClick={onClose} />
-          </Flex>
+          <NavLinks items={navItems} mode="button" onLinkClick={onClose} />
         </DrawerBody>
         <Divider />
         <DrawerFooter justifyContent="center">
-          <HeaderActions actions={actions} size="md" />
+          <ActionsButtons actions={actions} />
         </DrawerFooter>
       </DrawerContent>
     </Drawer>

@@ -1,9 +1,8 @@
-import { Flex, useDisclosure } from "@chakra-ui/react";
+import { useDisclosure } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { Action, NavItem } from "@/shared/config";
 import { useIsMobile } from "@/shared/lib/screen";
-import { LogoLink, NavLinks } from "@/shared/ui";
-import { HeaderActions } from "./header-actions";
+import { ActionsButtons, LogoLink, NavLinks } from "@/shared/ui";
 import { HeaderBurger } from "./header-burger";
 import { HeaderSidebar } from "./header-sidebar";
 import "./styles.scss";
@@ -32,12 +31,8 @@ export function Header(props: HeaderProps) {
         <LogoLink />
         {!isMobile ? (
           <>
-            {!!navItems.length && (
-              <Flex columnGap="12" className="header-nav-links">
-                <NavLinks items={navItems} />
-              </Flex>
-            )}
-            {!!actions.length && <HeaderActions actions={actions} />}
+            {!!navItems.length && <NavLinks items={navItems} />}
+            {!!actions.length && <ActionsButtons actions={actions} />}
           </>
         ) : (
           <HeaderBurger onClick={openSidebar} />

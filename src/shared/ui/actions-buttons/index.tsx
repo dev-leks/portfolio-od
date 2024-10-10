@@ -1,20 +1,19 @@
-import { Button, ButtonProps, Flex } from "@chakra-ui/react";
+import { Button, Flex } from "@chakra-ui/react";
 import { Action } from "@/shared/config";
 
-interface HeaderActionsProps {
+interface ActionsButtonsProps {
   actions: Action[];
-  size?: ButtonProps["size"];
 }
 
-export function HeaderActions(props: HeaderActionsProps) {
-  const { actions, size = "sm" } = props;
+export function ActionsButtons(props: ActionsButtonsProps) {
+  const { actions } = props;
 
   return (
-    <Flex>
+    <Flex className="actions-buttons">
       {actions.map(({ title, icon, onClick }) => (
         <Button
           key={title}
-          size={size}
+          size="sm"
           variant="outline"
           leftIcon={icon}
           onClick={onClick}

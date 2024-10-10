@@ -1,0 +1,13 @@
+.header-sidebar {
+  .actions-buttons {
+    @apply flex-1;
+
+    button {
+      @apply w-full;
+    }
+  }
+
+  .nav-links {
+    @apply flex-col gap-2;
+  }
+}
