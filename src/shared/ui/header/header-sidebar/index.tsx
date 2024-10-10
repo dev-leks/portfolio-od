@@ -1,39 +1,51 @@
-import { useOutsideClick } from "@chakra-ui/react";
-import { PropsWithChildren, useRef } from "react";
-import { NavItem } from "@/shared/config";
-import { HeaderNavLinks } from "../header-nav-links";
-import { HeaderSidebarTop } from "./header-sidebar-top";
+import {
+  Divider,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay, Flex
+} from "@chakra-ui/react";
+import { Action, NavItem } from "@/shared/config";
+import { LogoLink, NavLinks } from "@/shared/ui";
+import { HeaderActions } from "../header-actions";
 
-interface HeaderSidebarProps extends PropsWithChildren {
+interface HeaderSidebarProps {
   isOpen: boolean;
   navItems: NavItem[];
+  actions: Action[];
   onClose(): void;
 }
 
 export function HeaderSidebar(props: HeaderSidebarProps) {
-  const { isOpen, navItems, children, onClose } = props;
-
-  const sidebarRef = useRef<HTMLDivElement>(null);
-
-  useOutsideClick({
-    ref: sidebarRef,
-    handler: onClose,
-  });
+  const { isOpen, navItems, actions, onClose } = props;
 
   return (
-    <div role="dialog" aria-modal="true">
-      <div className={`header-sidebar-placeholder ${isOpen ? "open" : ""}`} />
-      <div className={`header-sidebar ${isOpen ? "open" : ""} `} ref={sidebarRef}>
-        <HeaderSidebarTop onClose={onClose} />
-        <div className="header-sidebar-content">
-          <div className="py-6">
-            <HeaderNavLinks items={navItems} classNameSuffix="-sidebar" onLinkClick={onClose} />
-          </div>
-          <div className="py-6">
-            {children}
-          </div>
-        </div>
-      </div>
-    </div>
+    <Drawer
+      isOpen={isOpen}
+      autoFocus={false}
+      returnFocusOnClose={false}
+      onClose={onClose}
+    >
+      <DrawerOverlay />
+      <DrawerContent>
+        <DrawerCloseButton size="lg" className="bg-gray-800" />
+        <DrawerHeader>
+          <LogoLink onClick={onClose} />
+        </DrawerHeader>
+        <Divider />
+        <DrawerBody className="py-6">
+          <Flex flexDirection="column" gap="2">
+            <NavLinks items={navItems} onLinkClick={onClose} />
+          </Flex>
+        </DrawerBody>
+        <Divider />
+        <DrawerFooter justifyContent="center">
+          <HeaderActions actions={actions} size="md" />
+        </DrawerFooter>
+      </DrawerContent>
+    </Drawer>
   );
 }

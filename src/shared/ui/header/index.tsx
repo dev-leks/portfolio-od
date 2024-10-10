@@ -1,52 +1,55 @@
-import { useMediaQuery } from "@chakra-ui/react";
-import { ReactNode, useEffect } from "react";
-import { NavItem } from "@/shared/config";
-import { ScreenSizes } from "@/shared/config/screen";
-import { useIsOpen } from "@/shared/lib/state";
+import { Flex, useDisclosure } from "@chakra-ui/react";
+import { useEffect } from "react";
+import { Action, NavItem } from "@/shared/config";
+import { useIsMobile } from "@/shared/lib/screen";
+import { LogoLink, NavLinks } from "@/shared/ui";
+import { HeaderActions } from "./header-actions";
 import { HeaderBurger } from "./header-burger";
-import { HeaderNav } from "./header-nav";
-import { HeaderNavLinks } from "./header-nav-links";
 import { HeaderSidebar } from "./header-sidebar";
 import "./styles.scss";
 
 interface HeaderProps {
   navItems?: NavItem[];
-  extraContent?: ReactNode;
+  actions?: Action[];
 }
 
 export function Header(props: HeaderProps) {
-  const { navItems = [], extraContent } = props;
+  const { navItems = [], actions = [] } = props;
 
-  const { isOpen: isSidebarOpen, open: openSidebar, close: closeSidebar } = useIsOpen(false);
+  const { isOpen: isSidebarOpen, onOpen: openSidebar, onClose: closeSidebar } = useDisclosure();
 
-  const [isMobile] = useMediaQuery(`(max-width: ${ScreenSizes.lg - 1}px)`);
+  const { isMobile } = useIsMobile();
 
   useEffect(() => {
     if (!isMobile && isSidebarOpen) {
       closeSidebar();
     }
-  }, [closeSidebar, isMobile, isSidebarOpen]);
+  }, [isMobile, isSidebarOpen, closeSidebar]);
 
   return (
     <header className="header">
-      <HeaderNav>
+      <nav className="header-nav">
+        <LogoLink />
         {!isMobile ? (
           <>
-            <HeaderNavLinks items={navItems}/>
-            {extraContent && (
-              <div className="header-nav-end">
-                {extraContent}
-              </div>
+            {!!navItems.length && (
+              <Flex columnGap="12" className="header-nav-links">
+                <NavLinks items={navItems} />
+              </Flex>
             )}
+            {!!actions.length && <HeaderActions actions={actions} />}
           </>
         ) : (
           <HeaderBurger onClick={openSidebar} />
         )}
-      </HeaderNav>
+      </nav>
       {isMobile && (
-        <HeaderSidebar isOpen={isSidebarOpen} navItems={navItems} onClose={closeSidebar}>
-          {extraContent}
-        </HeaderSidebar>
+        <HeaderSidebar
+          isOpen={isSidebarOpen}
+          navItems={navItems}
+          actions={actions}
+          onClose={closeSidebar}
+        />
       )}
     </header>
   );

@@ -1,10 +1,9 @@
 "use client";
 
-import { Button } from "@chakra-ui/react";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 import { MdDownload } from "react-icons/md";
-import { NavItem, Routes } from "@/shared/config";
+import { Action, NavItem, Routes } from "@/shared/config";
 import { Header } from "@/shared/ui";
 
 export function AppHeader() {
@@ -21,12 +20,13 @@ export function AppHeader() {
     }))
   ), [pathname]);
 
+  const actions: Action[] = useMemo<Action[]>(() => (
+    [
+      { title: "Resume", icon: <MdDownload />, onClick: () => null },
+    ]
+  ), []);
+
   return (
-    <Header
-      navItems={navItems}
-      extraContent={(
-        <Button size="sm" variant="outline" leftIcon={<MdDownload/>}>Resume</Button>
-      )}
-    />
+    <Header navItems={navItems} actions={actions} />
   );
 }

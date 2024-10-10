@@ -1,71 +1,11 @@
 .header {
   @apply bg-white;
 
-  .header-logo {
-    @apply py-2 px-3 text-lg;
-  }
-
   .header-nav {
-    @apply mx-auto flex max-w-screen-2xl items-center justify-between px-6 py-4 lg:py-6 lg:px-8;
-  }
-
-  .header-nav-logo {
-    @apply flex flex-1;
+    @apply mx-auto flex max-w-screen-2xl items-center justify-between px-6 py-4 lg:py-5 lg:px-8;
   }
 
   .header-nav-links {
-    @apply hidden lg:flex lg:gap-x-12;
-  }
-
-  .header-nav-link {
-    @apply text-sm font-semibold leading-6 text-gray-900 border-b-2 border-transparent hover:border-gray-400;
-
-    &.active {
-      @apply font-black;
-    }
-  }
-
-  .header-nav-end {
-    @apply flex flex-1 justify-end;
-  }
-
-  .header-sidebar-placeholder {
-    @apply fixed z-10;
-
-    &.open {
-      @apply inset-0;
-    }
-  }
-
-  .header-sidebar {
-    @apply translate-x-full fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 ease-in-out duration-300;
-
-    &.open {
-      @apply translate-x-0;
-    }
-  }
-
-  .header-sidebar-top {
-    @apply flex items-center justify-between;
-  }
-
-  .header-sidebar-content {
-    @apply divide-y divide-gray-500/10;
-
-    button {
-      @apply w-full;
-    }
-  }
-
-  .header-sidebar-nav-links {
-    @apply flex flex-col gap-2;
-  }
-
-  .header-sidebar-nav-link {
-    @apply block rounded-lg py-2 px-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50;
-
-    &.active {
-      @apply font-black bg-gray-100;
-    }
+    @apply hidden lg:flex;
   }
 }
