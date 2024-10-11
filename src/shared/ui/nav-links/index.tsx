@@ -1,5 +1,4 @@
 import { Link } from "@chakra-ui/next-js";
-import { Flex } from "@chakra-ui/react";
 import { clsx } from "clsx";
 import { NavItem } from "@/shared/config";
 import "./styles.scss";
@@ -16,7 +15,7 @@ export function NavLinks(props: NavLinksProps) {
   const { items, mode = "link", onLinkClick } = props;
 
   return (
-    <Flex className="nav-links">
+    <div className="nav-links">
       {items.map(({ title, href, isActive }) => (
         <Link
           key={title}
@@ -31,6 +30,6 @@ export function NavLinks(props: NavLinksProps) {
           {title}
         </Link>
       ))}
-    </Flex>
+    </div>
   );
 }

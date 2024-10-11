@@ -1,0 +1,11 @@
+.job-titles {
+  @apply flex items-center gap-x-8;
+
+  .job-titles-line {
+    @apply w-20 border-black border-b-2 opacity-100;
+  }
+
+  .job-title {
+    @apply text-sm font-bold text-black uppercase;
+  }
+}

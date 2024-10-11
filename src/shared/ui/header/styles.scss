@@ -1,8 +1,8 @@
 .header {
-  @apply bg-white;
+  @apply bg-white lg:static sticky top-0;
 
   .header-nav {
-    @apply mx-auto flex max-w-screen-2xl items-center justify-between px-6 py-4 lg:py-5 lg:px-8;
+    @apply flex max-w-screen-2xl mx-auto items-center justify-between px-6 py-4 lg:py-5 lg:px-8;
   }
 
   .nav-links {

@@ -1,0 +1,7 @@
+.hello-banner {
+  @apply flex items-center justify-center flex-wrap gap-y-8 gap-x-4 lg:gap-x-28 w-full py-2 lg:py-32;
+
+  .hello-banner-row {
+    @apply flex flex-col gap-6 max-w-full md:max-w-sm lg:max-w-md xl:max-w-lg;
+  }
+}

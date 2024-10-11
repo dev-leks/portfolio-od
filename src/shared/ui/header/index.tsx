@@ -1,3 +1,5 @@
+"use client";
+
 import { useDisclosure } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { Action, NavItem } from "@/shared/config";

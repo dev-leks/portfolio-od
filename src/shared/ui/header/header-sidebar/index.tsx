@@ -31,12 +31,11 @@ export function HeaderSidebar(props: HeaderSidebarProps) {
     >
       <DrawerOverlay />
       <DrawerContent className="header-sidebar">
-        <DrawerCloseButton size="lg" className="bg-gray-800" />
+        <DrawerCloseButton size="lg" />
         <DrawerHeader>
           <LogoLink onClick={onClose} />
         </DrawerHeader>
-        <Divider />
-        <DrawerBody className="py-6">
+        <DrawerBody py="6">
           <NavLinks items={navItems} mode="button" onLinkClick={onClose} />
         </DrawerBody>
         <Divider />

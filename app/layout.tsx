@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import React, { PropsWithChildren } from "react";
 import Providers from "@/app/providers";
-import { AppHeader } from "@/features/layout";
+import { AppHeader } from "@/widgets/layout";
 import "@/app/styles/globals.scss";
 
 export const metadata: Metadata = {

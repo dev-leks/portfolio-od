@@ -1,4 +1,4 @@
-import { Button, Flex } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 import { Action } from "@/shared/config";
 
 interface ActionsButtonsProps {
@@ -9,18 +9,18 @@ export function ActionsButtons(props: ActionsButtonsProps) {
   const { actions } = props;
 
   return (
-    <Flex className="actions-buttons">
+    <div className="actions-buttons">
       {actions.map(({ title, icon, onClick }) => (
         <Button
           key={title}
           size="sm"
-          variant="outline"
+          colorScheme="yellow"
           leftIcon={icon}
           onClick={onClick}
         >
           {title}
         </Button>
       ))}
-    </Flex>
+    </div>
   );
 }

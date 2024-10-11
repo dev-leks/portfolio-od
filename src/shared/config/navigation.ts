@@ -1,11 +1,17 @@
+import { ReactElement } from "react";
+
 export const Routes = {
   home: "/",
   about: "/about",
   projects: "/projects",
 };
 
-export interface NavItem {
+export interface LinkItem {
   title: string;
-  href: typeof Routes[keyof typeof Routes];
+  href: string;
+  icon?: ReactElement;
+}
+
+export interface NavItem extends LinkItem {
   isActive?: boolean;
 }
