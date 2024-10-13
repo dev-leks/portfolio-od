@@ -1,16 +1,18 @@
 import { MdDownload } from "react-icons/md";
-import { Action } from "@/shared/config";
+import { ActionLink } from "@/shared/config";
 
 interface UseDownloadResumeActionParams {
   isFullTitle?: boolean;
 }
 
-export const useDownloadResumeAction = (params?: UseDownloadResumeActionParams): Action => {
+export const useDownloadResumeAction = (params?: UseDownloadResumeActionParams): ActionLink => {
   const { isFullTitle = true } = params || {};
 
   return {
     title: isFullTitle ? "Download Resume" : "Resume",
-    icon: <MdDownload />,
-    onClick: () => null,
+    type: "link",
+    href: "/docs/Resume_Oleksandr_Drobot_FE_SE.pdf",
+    isDownload: true,
+    leftIcon: <MdDownload />,
   };
 };

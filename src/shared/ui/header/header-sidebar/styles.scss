@@ -2,7 +2,7 @@
   .actions-buttons {
     @apply flex flex-1;
 
-    button {
+    .link-button-box, button {
       @apply w-full;
     }
   }

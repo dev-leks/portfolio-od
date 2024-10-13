@@ -12,7 +12,7 @@ export function BannerImage(props: BannerImageProps) {
     <Img
       src={source}
       alt={alt}
-      boxSize={{ sm: "xs", lg: "sm", xl: "md" }}
+      boxSize={{ md: "sm", xl: "md" }}
       objectFit="cover"
       borderRadius="2xl"
     />

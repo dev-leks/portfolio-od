@@ -1,5 +1,5 @@
-import { Button } from "@chakra-ui/react";
 import { Action } from "@/shared/config";
+import { ActionButton } from "@/shared/ui";
 
 interface ActionsButtonsProps {
   actions: Action[];
@@ -10,16 +10,13 @@ export function ActionsButtons(props: ActionsButtonsProps) {
 
   return (
     <div className="actions-buttons">
-      {actions.map(({ title, icon, onClick }) => (
-        <Button
-          key={title}
+      {actions.map((action) => (
+        <ActionButton
+          key={action.title}
           size="sm"
           colorScheme="yellow"
-          leftIcon={icon}
-          onClick={onClick}
-        >
-          {title}
-        </Button>
+          {...action}
+        />
       ))}
     </div>
   );

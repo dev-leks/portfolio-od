@@ -9,7 +9,8 @@ import {
   DrawerOverlay,
 } from "@chakra-ui/react";
 import { Action, NavItem } from "@/shared/config";
-import { ActionsButtons, LogoLink, NavLinks } from "@/shared/ui";
+import { LogoLink, NavLinks } from "@/shared/ui";
+import { ActionsButtons } from "../actions-buttons";
 import "./styles.scss";
 
 interface HeaderSidebarProps {
