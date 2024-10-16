@@ -1,0 +1,21 @@
+.skills-list {
+  @apply flex flex-wrap justify-center gap-x-10 md:gap-x-12 gap-y-2 md:gap-y-8;
+
+  .skills-list-item {
+    @apply w-20 lg:w-28 flex flex-col items-center gap-y-2 py-2 text-center transition-transform;
+
+    &:hover {
+      .skills-list-item-icon {
+        @apply scale-110;
+      }
+    }
+  }
+
+  .skills-list-item-icon {
+    @apply text-5xl md:text-6xl;
+  }
+
+  .skills-list-item-title {
+    @apply text-sm;
+  }
+}

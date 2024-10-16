@@ -1,5 +1,13 @@
+.hello-banner-container {
+  @apply flex flex-col;
+
+  .hello-banner-divider {
+    @apply w-20 border-b-yellow-400 border-b-2 opacity-100 self-center my-4 md:my-8;
+  }
+}
+
 .hello-banner {
-  @apply flex items-center justify-center flex-wrap gap-y-8 gap-x-4 lg:gap-x-28 w-full py-2 lg:py-32;
+  @apply flex items-center justify-center flex-wrap gap-y-8 gap-x-4 lg:gap-x-28 w-full pt-8 pb-6 lg:py-28;
 
   .hello-banner-row {
     @apply flex flex-col gap-6 max-w-full md:max-w-sm lg:max-w-md xl:max-w-lg;

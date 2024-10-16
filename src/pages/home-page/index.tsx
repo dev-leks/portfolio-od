@@ -1,10 +1,11 @@
-import { HelloBanner } from "@/widgets/about-me";
-import { Container } from "@/shared/ui";
+import { HelloBanner, SkillsBanner } from "@/widgets/about-me";
+import "./styles.scss";
 
 export function HomePage() {
   return (
-    <Container>
+    <div className="home-page">
       <HelloBanner />
-    </Container>
+      <SkillsBanner />
+    </div>
   );
 }
