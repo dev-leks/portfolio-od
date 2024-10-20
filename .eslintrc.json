@@ -4,6 +4,7 @@
     "semi": "error",
     "quotes": "error",
     "react/display-name": "off",
-    "@conarti/feature-sliced/absolute-relative": "off"
+    "@conarti/feature-sliced/absolute-relative": "off",
+    "@typescript-eslint/no-empty-object-type": "off"
   }
 }

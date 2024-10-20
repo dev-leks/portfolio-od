@@ -2,7 +2,9 @@ import { Container as ChakraContainer, ContainerProps as ChakraContainerProps } 
 import { clsx } from "clsx";
 import "./styles.scss";
 
-export function Container(props: ChakraContainerProps) {
+export interface ContainerProps extends ChakraContainerProps {}
+
+export function Container(props: ContainerProps) {
   const { children, className, ...otherProps } = props;
 
   return (

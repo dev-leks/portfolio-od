@@ -1,7 +1,7 @@
-import { Divider, Text } from "@chakra-ui/react";
-import { BannerImage, Container, HeadingGradient } from "@/shared/ui";
+import { Divider, Img, Text } from "@chakra-ui/react";
+import { Container, HeadingGradient } from "@/shared/ui";
 import { JobTitles } from "./job-titles";
-import { SocialActions } from "./social-actions";
+import { SocialLinks } from "./social-links";
 import "./styles.scss";
 
 export function HelloBanner() {
@@ -17,9 +17,15 @@ export function HelloBanner() {
             I&#39;m Frontend Software Engineer with 6 years of experience building scalable applications
             with modern frameworks and tools.
           </Text>
-          <SocialActions />
+          <SocialLinks />
         </div>
-        <BannerImage source="/images/me.jpg" alt="Oleksandr Drobot" />
+        <Img
+          src="/images/me.jpg"
+          alt="Oleksandr Drobot"
+          boxSize={{ md: "sm", xl: "md" }}
+          objectFit="cover"
+          borderRadius="2xl"
+        />
       </div>
       <Divider className="hello-banner-divider" />
     </Container>

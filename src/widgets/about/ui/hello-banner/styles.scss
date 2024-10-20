@@ -1,6 +1,4 @@
 .hello-banner-container {
-  @apply flex flex-col;
-
   .hello-banner-divider {
     @apply w-20 border-b-yellow-400 border-b-2 opacity-100 self-center my-4 md:my-8;
   }

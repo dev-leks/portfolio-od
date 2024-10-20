@@ -1,0 +1,17 @@
+.skill-card {
+  @apply w-20 lg:w-28 flex flex-col items-center gap-y-2 py-2 text-center transition-transform;
+
+  &:hover {
+    .skill-card-icon {
+      @apply scale-110;
+    }
+  }
+
+  .skill-card-icon {
+    @apply text-5xl md:text-6xl;
+  }
+
+  .skill-card-title {
+    @apply text-sm;
+  }
+}

@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Skill } from "@/features/skills";
+import { Skill } from "@/entities/skills";
 import {
   BootstrapIcon,
   ExpressIcon,

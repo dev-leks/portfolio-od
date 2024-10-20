@@ -5,7 +5,7 @@ import { useDownloadResumeAction } from "@/features/resume";
 import { useSocialLinks } from "@/features/socials";
 import { ActionButton } from "@/shared/ui";
 
-export function SocialActions() {
+export function SocialLinks() {
   const downloadResumeAction = useDownloadResumeAction();
 
   const { socialLinks } = useSocialLinks();

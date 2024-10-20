@@ -1,5 +1,6 @@
-import { List, ListItem, Text } from "@chakra-ui/react";
+import { List, ListItem } from "@chakra-ui/react";
 import { useSkills } from "@/features/skills";
+import { SkillCard } from "@/entities/skills";
 import "./styles.scss";
 
 export function SkillsList() {
@@ -7,12 +8,9 @@ export function SkillsList() {
 
   return (
     <List className="skills-list">
-      {skills.map(({ title, icon: Icon }) => (
-        <ListItem key={title} className="skills-list-item">
-          <Icon className="skills-list-item-icon" />
-          <Text className="skills-list-item-title">
-            {title}
-          </Text>
+      {skills.map((skill) => (
+        <ListItem key={skill.title}>
+          <SkillCard {...skill} />
         </ListItem>
       ))}
     </List>
