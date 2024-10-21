@@ -2,27 +2,25 @@
 
 import { Card, CardBody, Img } from "@chakra-ui/react";
 import { clsx } from "clsx";
-import { PropsWithChildren } from "react";
+import { ReactNode } from "react";
+import { Experience } from "@/shared/config/experience";
 import { useIsMobile } from "@/shared/lib/screen";
 import { ExperienceCardHeader } from "./experience-card-header";
 import "./styles.scss";
 
-interface ExperienceCardProps extends PropsWithChildren {
+interface ExperienceCardProps extends Omit<Experience, "name"> {
   title: string;
-  titleUrl?: string;
   secondaryTitle?: string;
-  logoSource?: string;
-  startDate: Date;
-  endDate?: Date;
   className?: string;
+  children?: ReactNode;
 }
 
 export function ExperienceCard(props: ExperienceCardProps) {
   const {
     title,
-    titleUrl,
     secondaryTitle,
     logoSource,
+    url,
     startDate,
     endDate,
     className,
@@ -53,7 +51,7 @@ export function ExperienceCard(props: ExperienceCardProps) {
       <div className="experience-card-inner">
         <ExperienceCardHeader
           title={title}
-          titleUrl={titleUrl}
+          url={url}
           secondaryTitle={secondaryTitle}
           startDate={startDate}
           endDate={endDate}

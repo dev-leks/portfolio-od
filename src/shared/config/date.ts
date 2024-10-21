@@ -1,3 +1,3 @@
 export const Formats = {
-  fullMonthAndYear: "MMM YYYY",
+  shortMonthAndYear: "MMM YYYY",
 };

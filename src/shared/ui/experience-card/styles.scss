@@ -18,15 +18,15 @@
   }
 
   .experience-card-header-title-wrapper {
-    @apply flex flex-col md:flex-row gap-1 justify-between;
+    @apply flex flex-col md:flex-row gap-x-2 gap-y-1 justify-between;
   }
 
   .experience-card-header-title {
-    @apply font-medium;
+    @apply font-medium leading-6;
   }
 
   .experience-card-header-range {
-    @apply text-xs font-medium text-gray-500;
+    @apply text-xs font-medium text-gray-500 text-nowrap;
   }
 
   .experience-card-header-secondary-title {

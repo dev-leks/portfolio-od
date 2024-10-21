@@ -3,15 +3,17 @@ import { CareerCompany } from "@/entities/career";
 import { ExperienceCard } from "@/shared/ui";
 import "./styles.scss";
 
-export function CareerCompanyCard(props: CareerCompany) {
-  const { name, position, logoSource, startDate, endDate, url, accomplishments } = props;
+interface CareerCompanyCardProps extends CareerCompany {}
+
+export function CareerCompanyCard(props: CareerCompanyCardProps) {
+  const { name, position, logoSource, url, startDate, endDate, accomplishments } = props;
 
   return (
     <ExperienceCard
       title={name}
-      titleUrl={url}
       secondaryTitle={position}
-      logoSource={`/images/${logoSource}`}
+      logoSource={logoSource && `/images/${logoSource}`}
+      url={url}
       startDate={startDate}
       endDate={endDate}
     >
