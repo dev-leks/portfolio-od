@@ -2,9 +2,9 @@
 
 import compose from "compose-function";
 import { FC, PropsWithChildren } from "react";
-import { withChakraUi } from "./with-chakra-ui";
+import { withChakraUI } from "./with-chakra-ui";
 
-const withProviders = compose(withChakraUi);
+const withProviders = compose(withChakraUI);
 
 const Providers: FC<PropsWithChildren> = withProviders(({ children }: PropsWithChildren) => {
   return <>{children}</>;

@@ -6,7 +6,7 @@ interface UseIsMobileReturnValues {
 }
 
 export const useIsMobile = (): UseIsMobileReturnValues => {
-  const [isMobile] = useMediaQuery(`(max-width: ${ScreenSizes.lg - 1}px)`);
+  const [isMobile] = useMediaQuery(`(max-width: ${ScreenSizes.md - 1}px)`);
 
   return { isMobile };
 };

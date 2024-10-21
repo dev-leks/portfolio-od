@@ -1,5 +1,5 @@
 .header {
-  @apply bg-white sticky top-0 ring-1 ring-gray-100;
+  @apply bg-white sticky z-10 top-0 ring-1 ring-gray-100;
 
   .header-nav {
     @apply flex max-w-screen-2xl mx-auto items-center justify-between px-6 py-2 lg:py-4 lg:px-8;

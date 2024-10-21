@@ -1,0 +1,39 @@
+.experience-card.chakra-card {
+  @apply w-full rounded-xl bg-gray-100 border-0 py-3 sm:px-3 lg:px-10;
+
+  .experience-card-logo {
+    @apply m-5;
+  }
+
+  .experience-card-inner {
+    @apply flex-1;
+  }
+
+  .experience-card-header {
+    @apply flex flex-row gap-4 pb-2;
+  }
+
+  .experience-card-header-content {
+    @apply flex flex-col flex-1 gap-1 justify-center;
+  }
+
+  .experience-card-header-title-wrapper {
+    @apply flex flex-col md:flex-row gap-1 justify-between;
+  }
+
+  .experience-card-header-title {
+    @apply font-medium;
+  }
+
+  .experience-card-header-range {
+    @apply text-xs font-medium text-gray-500;
+  }
+
+  .experience-card-header-secondary-title {
+    @apply text-sm font-normal;
+  }
+
+  .experience-card-body {
+    @apply pt-0;
+  }
+}

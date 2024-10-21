@@ -1,8 +1,11 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { FC, PropsWithChildren } from "react";
+import { themeConfig } from "@/shared/config";
 
-export const withChakraUi = (Component: FC<PropsWithChildren>) => (props: PropsWithChildren) => (
-  <ChakraProvider>
+const theme = extendTheme(themeConfig);
+
+export const withChakraUI = (Component: FC<PropsWithChildren>) => (props: PropsWithChildren) => (
+  <ChakraProvider theme={theme}>
     <Component {...props} />
   </ChakraProvider>
 );

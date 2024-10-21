@@ -3,7 +3,7 @@
 import { useDisclosure } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { Action, NavItem } from "@/shared/config";
-import { useIsMobile } from "@/shared/lib/screen";
+import { useIsTablet } from "@/shared/lib/screen";
 import { LogoLink, NavLinks } from "@/shared/ui";
 import { ActionsButtons } from "./actions-buttons";
 import { HeaderBurger } from "./header-burger";
@@ -20,19 +20,19 @@ export function Header(props: HeaderProps) {
 
   const { isOpen: isSidebarOpen, onOpen: openSidebar, onClose: closeSidebar } = useDisclosure();
 
-  const { isMobile } = useIsMobile();
+  const { isTablet } = useIsTablet();
 
   useEffect(() => {
-    if (!isMobile && isSidebarOpen) {
+    if (!isTablet && isSidebarOpen) {
       closeSidebar();
     }
-  }, [isMobile, isSidebarOpen, closeSidebar]);
+  }, [isTablet, isSidebarOpen, closeSidebar]);
 
   return (
     <header className="header">
       <nav className="header-nav">
         <LogoLink />
-        {!isMobile ? (
+        {!isTablet ? (
           <>
             {!!navItems.length && <NavLinks items={navItems} />}
             {!!actions.length && <ActionsButtons actions={actions} />}
@@ -41,7 +41,7 @@ export function Header(props: HeaderProps) {
           <HeaderBurger onClick={openSidebar} />
         )}
       </nav>
-      {isMobile && (
+      {isTablet && (
         <HeaderSidebar
           isOpen={isSidebarOpen}
           navItems={navItems}
