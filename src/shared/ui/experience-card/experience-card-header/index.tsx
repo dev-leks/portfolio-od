@@ -1,7 +1,7 @@
 import { CardHeader, Heading, Link, Text } from "@chakra-ui/react";
 import dayjs from "dayjs";
 import { ReactNode } from "react";
-import { Formats } from "@/shared/config/date";
+import { DateFormats } from "@/shared/config/date";
 import { Experience } from "@/shared/config/experience";
 
 interface ExperienceCardHeaderProps extends Pick<Experience, "url" | "startDate" | "endDate"> {
@@ -13,8 +13,8 @@ interface ExperienceCardHeaderProps extends Pick<Experience, "url" | "startDate"
 export function ExperienceCardHeader(props: ExperienceCardHeaderProps) {
   const { title, url, secondaryTitle, startDate, endDate, image } = props;
 
-  const formatedStartDate = startDate && dayjs(startDate).format(Formats.shortMonthAndYear);
-  const formatedEndDate = endDate ? dayjs(endDate).format(Formats.shortMonthAndYear) : "Present";
+  const formatedStartDate = startDate && dayjs(startDate).format(DateFormats.shortMonthAndYear);
+  const formatedEndDate = endDate ? dayjs(endDate).format(DateFormats.shortMonthAndYear) : "Present";
 
   return (
     <CardHeader className="experience-card-header">

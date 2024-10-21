@@ -1,0 +1,19 @@
+.footer {
+  @apply ring-1 ring-gray-100;
+
+  .footer-container {
+    @apply py-6;
+  }
+
+  .footer-inner {
+    @apply self-center md:self-end flex items-center gap-1.5;
+  }
+
+  .footer-text {
+    @apply text-sm;
+  }
+
+  .footer-icons {
+    @apply inline-flex gap-0.5;
+  }
+}

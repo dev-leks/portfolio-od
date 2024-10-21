@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import React, { PropsWithChildren } from "react";
 import Providers from "@/app/providers";
 import { AppHeader } from "@/widgets/layout";
+import { Footer } from "@/shared/ui";
 import "@/app/styles/globals.scss";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout(props: PropsWithChildren) {
           <main>
             {children}
           </main>
+          <Footer />
         </Providers>
       </body>
     </html>
