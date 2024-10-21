@@ -1,5 +1,5 @@
 import { useMediaQuery } from "@chakra-ui/react";
-import { ScreenSizes } from "@/shared/config";
+import { ScreenSizes } from "@/shared/config/screen";
 
 interface UseIsTabletReturnValues {
   isTablet: boolean;

@@ -1,5 +1,5 @@
 import { MdDownload } from "react-icons/md";
-import { ActionLink } from "@/shared/config";
+import { ActionLink } from "@/shared/config/actions";
 
 interface UseDownloadResumeActionParams {
   isFullTitle?: boolean;

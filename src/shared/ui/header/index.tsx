@@ -2,7 +2,8 @@
 
 import { useDisclosure } from "@chakra-ui/react";
 import { useEffect } from "react";
-import { Action, NavItem } from "@/shared/config";
+import { Action } from "@/shared/config/actions";
+import { NavItem } from "@/shared/config/navigation";
 import { useIsTablet } from "@/shared/lib/screen";
 import { LogoLink, NavLinks } from "@/shared/ui";
 import { ActionsButtons } from "./actions-buttons";

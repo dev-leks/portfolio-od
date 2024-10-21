@@ -1,5 +1,5 @@
 import { Link } from "@chakra-ui/next-js";
-import { Routes } from "@/shared/config";
+import { Routes } from "@/shared/config/navigation";
 import "./styles.scss";
 
 interface LogoLinkProps {

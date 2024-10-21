@@ -1,6 +1,6 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { FC, PropsWithChildren } from "react";
-import { themeConfig } from "@/shared/config";
+import { themeConfig } from "@/shared/config/chakra-ui";
 
 const theme = extendTheme(themeConfig);
 

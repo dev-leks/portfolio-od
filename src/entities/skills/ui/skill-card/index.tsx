@@ -2,7 +2,9 @@ import { Text } from "@chakra-ui/react";
 import { Skill } from "@/entities/skills";
 import "./styles.scss";
 
-export function SkillCard(props: Skill) {
+interface SkillCardProps extends Skill {}
+
+export function SkillCard(props: SkillCardProps) {
   const { title, icon: Icon } = props;
 
   return (

@@ -1,5 +1,5 @@
 import { Button, ButtonProps } from "@chakra-ui/react";
-import { Action } from "@/shared/config";
+import { Action } from "@/shared/config/actions";
 import { LinkButton } from "@/shared/ui";
 
 type ActionButtonProps = Omit<ButtonProps, "type"> & Action;

@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { LinkItem } from "@/shared/config";
+import { LinkItem } from "@/shared/config/navigation";
 
 interface UseSocialLinksReturnValues {
   socialLinks: LinkItem[];

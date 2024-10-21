@@ -1,4 +1,4 @@
-import { Action } from "@/shared/config";
+import { Action } from "@/shared/config/actions";
 import { ActionButton } from "@/shared/ui";
 
 interface ActionsButtonsProps {

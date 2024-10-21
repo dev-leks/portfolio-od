@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
-import { NavItem, Routes } from "@/shared/config";
+import { NavItem, Routes } from "@/shared/config/navigation";
 
 interface UseNavItemsReturnValues {
   navItems: NavItem[];

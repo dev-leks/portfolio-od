@@ -14,7 +14,7 @@ export function HelloBanner() {
             Hello, I&#39;m<br />Oleksandr Drobot
           </HeadingGradient>
           <Text>
-            I&#39;m Frontend Software Engineer with 6 years of experience building scalable applications
+            I&#39;m Senior Software Engineer with 6 years of experience building scalable applications
             with modern frameworks and tools.
           </Text>
           <SocialLinks />

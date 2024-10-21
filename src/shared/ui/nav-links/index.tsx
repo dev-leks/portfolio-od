@@ -1,6 +1,6 @@
 import { Link } from "@chakra-ui/next-js";
 import { clsx } from "clsx";
-import { NavItem } from "@/shared/config";
+import { NavItem } from "@/shared/config/navigation";
 import "./styles.scss";
 
 type NavLinksMode = "link" | "button";

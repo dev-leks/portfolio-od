@@ -8,7 +8,8 @@ import {
   DrawerHeader,
   DrawerOverlay,
 } from "@chakra-ui/react";
-import { Action, NavItem } from "@/shared/config";
+import { Action } from "@/shared/config/actions";
+import { NavItem } from "@/shared/config/navigation";
 import { LogoLink, NavLinks } from "@/shared/ui";
 import { ActionsButtons } from "../actions-buttons";
 import "./styles.scss";

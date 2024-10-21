@@ -1,7 +1,9 @@
 import { Heading, HeadingProps } from "@chakra-ui/react";
 import "./styles.scss";
 
-export function HeadingGradient(props: HeadingProps) {
+interface HeadingGradientProps extends HeadingProps {}
+
+export function HeadingGradient(props: HeadingGradientProps) {
   const { children, ...otherProps } = props;
 
   return (
